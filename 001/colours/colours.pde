@@ -5,16 +5,21 @@ void settings()
 
 void setup()
 {
-  noStroke();
   colorMode(HSB,100);
-  background(0,0,100);
   ellipseMode(CORNER);
+  noStroke();
+  background(0,0,100);
 }
 
 void draw()
 {
-  background(0,0,100); 
+  background(0,0,100);
   
+  // Reminders:
+  // fill(hue, saturation, brightness);
+  // rect(x, y, width, height);
+  // ellipse(x, y, width, height);
+
   // Red square
   fill(0,100,100);
   rect(10,200,80,80);

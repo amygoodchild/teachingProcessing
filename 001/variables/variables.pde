@@ -1,4 +1,4 @@
-int x = 0;
+float x = 0;
 
 void settings()
 {
@@ -7,25 +7,32 @@ void settings()
 
 void setup()
 {
-  noStroke();
   colorMode(HSB,100);
-  background(0,0,100);
   ellipseMode(CORNER);
+  noStroke();
+  background(0,0,100);
 }
 
 void draw()
 {
-  background(0,0,100);
+  //background(0,0,100);
   
-  // Red square
-  fill(0,100,100);
-  rect(x,mouseY,80,80);
+  // Semi opaque background so we get trails
+  fill(0,0,100,10);
+  rect(0,0,width,height);
   
-  x = x + 10;
-  if (x > 800)
-  {
-    x = -100;
+  // Purple square
+  fill(80,90,90);
+  rect(mouseX,mouseY,80,80);
+
+  // Pink square
+  fill(90,100,100);
+  rect(x,200,80,80);
+  
+  x += 10;
+  
+  if(x > width){
+    x = -80;
   }
-  
 
 }
